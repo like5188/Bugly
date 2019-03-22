@@ -31,13 +31,22 @@
     }
 ```
 
-2、异常上报、应用升级功能配置：
+2、在project的build.gradle文件中添加：
+```java
+    dependencies {
+        // tinkersupport插件, 其中lastest.release指拉取最新版本，也可以指定明确版本号，例如1.0.4
+        classpath "com.tencent.bugly:tinker-support:1.1.5"
+        classpath "com.meituan.android.walle:plugin:1.1.6"
+    }
+```
+
+3、异常上报、应用升级功能配置：
 
 ① 在Application的onCreate()方法中调用BuglyUtils.init()方法进行初始化后，就能异常上报和自动检测更新了。
 
 ② 也可以调用BuglyUtils.checkUpgrade()方法手动进行新版本检测。
 
-3、热更新功能配置：
+4、热更新功能配置：
 
 ① 在app目录下增加文件：tinker-support.gradle。内容如下：
 ```java
@@ -160,7 +169,7 @@
 
     生成文件中的patch_signed_7zip.apk就是补丁包。
 
-4、如果需要渠道打包功能。需要做如下配置：
+5、如果需要渠道打包功能。需要做如下配置：
 
 ① 在app目录下增加两个个文件：
 
@@ -207,7 +216,7 @@
 
 ③ 使用命令：gradlew clean assembleReleaseChannels 打渠道包
 
-5、Proguard
+6、Proguard
 ```java
     -dontwarn com.tencent.bugly.**
     -keep public class com.tencent.bugly.**{*;}
