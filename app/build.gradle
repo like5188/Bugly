@@ -66,8 +66,8 @@ dependencies {
     // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    debugImplementation project(':bugly')
-    releaseImplementation 'com.github.like5188:Bugly:0.0.2'
+    debugImplementation project(':bugly')// debug 版本直接引用本地项目
+    releaseImplementation 'com.github.like5188:Bugly:0.0.2'// release 版本引用远程版本用来最终测试发现问题
 }
 
 // 热更新
