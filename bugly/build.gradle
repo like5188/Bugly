@@ -43,16 +43,16 @@ dependencies {
     // kotlin
     compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    api 'com.android.support:multidex:1.0.3'
+    compileOnly 'com.android.support:multidex:1.0.3'
 
     // 渠道打包神器api，用于读取渠道号
-    api 'com.meituan.android.walle:library:1.1.6'
-
-    api 'com.tencent.bugly:crashreport_upgrade:1.3.8'
+    compileOnly 'com.meituan.android.walle:library:1.1.6'
+    // 异常上报
+    compileOnly 'com.tencent.bugly:crashreport_upgrade:1.3.8'
     // 想使用NDK库，需要配置：nativecrashreport
-    api 'com.tencent.bugly:nativecrashreport:3.6.0.1'
+    compileOnly 'com.tencent.bugly:nativecrashreport:3.6.0.1'
     // 指定tinker依赖版本（注：应用升级1.3.5版本起，不再内置tinker）
-    api 'com.tencent.tinker:tinker-android-lib:1.9.9'
+    compileOnly 'com.tencent.tinker:tinker-android-lib:1.9.9'
 }
 
 // 引用脚本插件，其实这不能算一个插件，它只是一个脚本。应用脚本插件，其实就是把这个脚本加载进来，和二进制插件不同的是它使用的是from关键字.后面紧跟的坫一个脚本文件，可以是本地的，也可以是网络存在的

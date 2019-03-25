@@ -224,3 +224,19 @@
 ```
 
 ③ 使用命令：gradlew clean assembleReleaseChannels 打渠道包
+
+7、引用的库
+
+```java
+    compileOnly 'com.android.support:multidex:1.0.3'
+
+    // 渠道打包神器api，用于读取渠道号
+    compileOnly 'com.meituan.android.walle:library:1.1.6'
+
+    // 异常上报
+    compileOnly 'com.tencent.bugly:crashreport_upgrade:1.3.8'
+    // 想使用NDK库，需要配置：nativecrashreport
+    compileOnly 'com.tencent.bugly:nativecrashreport:3.6.0.1'
+    // 指定tinker依赖版本（注：应用升级1.3.5版本起，不再内置tinker）
+    compileOnly 'com.tencent.tinker:tinker-android-lib:1.9.9'
+```
