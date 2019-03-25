@@ -19,6 +19,9 @@ android {
             //设置支持的SO库架构
             abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
         }
+
+        // 添加混淆文件
+        consumerProguardFiles 'proguard-rules.pro'
     }
 
     buildTypes {
