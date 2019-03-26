@@ -78,7 +78,7 @@ dependencies {
     implementation 'com.tencent.tinker:tinker-android-lib:1.9.9'
 
     implementation project(':bugly')// debug 版本直接引用本地项目
-//    implementation 'com.github.like5188:Bugly:0.0.2'// release 版本引用远程版本用来最终测试发现问题
+//    implementation 'com.github.like5188:Bugly:0.0.5'// release 版本引用远程版本用来最终测试发现问题
 }
 
 // 热更新
